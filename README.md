@@ -21,6 +21,3 @@ To launch the live server :
 npm run dev
 
 ```
-
-
-
