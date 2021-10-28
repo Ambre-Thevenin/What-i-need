@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Date.css';
 
-function currentDate() {
+function CurrentDate() {
   const [userName, setUserName] = useState(localStorage.getItem('name'));
   useEffect(() => {
     if (!localStorage.getItem('name')) {
@@ -30,4 +30,4 @@ function currentDate() {
   );
 }
 
-export default currentDate;
+export default CurrentDate;
