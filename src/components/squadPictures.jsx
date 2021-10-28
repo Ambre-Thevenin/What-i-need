@@ -8,6 +8,7 @@ import witch from './assets/witch.png';
 function WinSquad() {
   return (
     <div className={styles.squad}>
+      <h1>À propos de nous</h1>
       <h2>WIN SQUAD</h2>
       <div className={styles.pictures}>
         <img className={styles.membersPictures} src={citrouille} alt="citrouille" />
