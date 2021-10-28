@@ -1,0 +1,28 @@
+.body {
+  background-color: #2a9d8f;
+  height: 100vh;
+}
+.contactForm {
+  background-color: #2a9d8f;
+}
+.squad {
+  background-color: #e9c46a;
+  height: 50vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+li {
+  display: none;
+}
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.membersPictures {
+  height: 15vh;
+  width: auto;
+  border-radius: 3vh;
+}
