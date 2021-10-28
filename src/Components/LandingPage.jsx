@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './LandingPage.module.css';
+import CurrentDate from '../components/Date';
 
 function LandingPage() {
   return (
@@ -7,7 +8,9 @@ function LandingPage() {
       <header className={styles.header}> Mettre ici le Logo, le burger et le +</header>
       <main className={styles.main}>
         <div className={styles.surprise}>Surprise</div>
-        <div className={styles.welcome}>Mettre ici le Bonjour Alex, nous sommes le date XXX, il est heure XXX</div>
+        <div className={styles.welcome}>
+          <CurrentDate />
+        </div>
         <div className={styles.input}>champs de saisie (input)</div>
 
         <div className={styles.cards}>
