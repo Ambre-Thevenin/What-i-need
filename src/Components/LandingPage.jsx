@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './LandingPage.module.css';
-import CurrentDate from './Components/Date';
+import CurrentDate from './Date';
 
 function LandingPage() {
   return (
