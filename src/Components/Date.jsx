@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './Date.css';
 
 function CurrentDate() {
   const [userName, setUserName] = useState(localStorage.getItem('name'));
