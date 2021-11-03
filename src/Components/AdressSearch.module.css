@@ -1,0 +1,11 @@
+.AdressSearchForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.AdressSearchInput {
+  width: 25vh;
+  margin: 0.75em;
+}
