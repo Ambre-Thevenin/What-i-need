@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './about.module.css';
-import citrouille from './assets/citrouille.png';
-import citrouilleMan from './assets/citrouilleMan.png';
-import epouvantail from './assets/epouvantail.png';
-import witch from './assets/witch.png';
+import person_1 from './assets/person_1.jpg';
+import person_2 from './assets/person_2.jpg';
+import person_3 from './assets/person_3.jpg';
+import person_4 from './assets/person_4.jpg';
 
 function WinSquad() {
   return (
@@ -11,12 +11,12 @@ function WinSquad() {
       <h1>À propos de nous</h1>
       <h2>WIN SQUAD</h2>
       <div className={styles.pictures}>
-        <img className={styles.membersPictures} src={citrouille} alt="citrouille" />
-        <img className={styles.membersPictures} src={citrouilleMan} alt="citrouilleMan" />
+        <img className={styles.membersPictures} src={person_1} alt="squad member one" />
+        <img className={styles.membersPictures} src={person_2} alt="squad member two" />
       </div>
       <div className={styles.pictures}>
-        <img className={styles.membersPictures} src={epouvantail} alt="epouvantail" />
-        <img className={styles.membersPictures} src={witch} alt="sorcière" />
+        <img className={styles.membersPictures} src={person_3} alt="squad member three" />
+        <img className={styles.membersPictures} src={person_4} alt="squad member four" />
       </div>
     </div>
   );
