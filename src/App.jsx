@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import LandingPage from './Components/LandingPage';
+import LandingPage from '../Components/LandingPage';
 import './App.css';
 import ContactForm from './Components/contactForm';
 import WinSquad from './Components/squadPictures';

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './LandingPage.module.css';
 import CurrentDate from '../components/Date';
+import AdressSearch from './Components/AdressSearch';
 
 function LandingPage() {
   return (
@@ -11,7 +12,9 @@ function LandingPage() {
         <div className={styles.welcome}>
           <CurrentDate />
         </div>
-        <div className={styles.input}>champs de saisie (input)</div>
+        <div className={styles.input}>
+          <AdressSearch />
+        </div>
 
         <div className={styles.cards}>
           <img src="https://www.radars-auto.com/carte-radar/carte-france-index.png" alt="cardMap" className={styles.card} />
