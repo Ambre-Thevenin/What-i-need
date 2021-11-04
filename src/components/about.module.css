@@ -1,15 +1,21 @@
 .body {
   background-color: #2a9d8f;
-  height: 100vh;
 }
+
 .contactForm {
   background-color: #2a9d8f;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .squad {
   background-color: #e9c46a;
-  height: 50vh;
+  height: 55vh;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -22,6 +28,7 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin: 1vh;
 }
 .membersPictures {
   height: 15vh;
@@ -32,4 +39,5 @@ li {
   width: 200px;
   height: 100px;
   resize: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

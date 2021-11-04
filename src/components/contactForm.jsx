@@ -16,8 +16,8 @@ function ContactForm() {
   return (
     <div className={styles.body}>
       <div className={styles.contactForm}>
-        <h1>Contact us !</h1>
-        <form ref={form} onSubmit={sendEmail}>
+        <h1>Contactez-nous !</h1>
+        <form className="form" ref={form} onSubmit={sendEmail}>
           <select>
             <option value="Question">Une question à poser</option>
             <option value="Proposition">De quoi nous améliorer</option>
