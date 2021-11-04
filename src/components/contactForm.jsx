@@ -6,7 +6,9 @@ import styles from './about.module.css';
 
 function ContactForm() {
   const form = useRef();
-
+  const onPressMessage = () => {
+    alert('Merci pour votre message !');
+  };
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -29,7 +31,7 @@ function ContactForm() {
           <input type="text" name="user_name" />
           <label htmlFor="message">Message</label>
           <textarea className={styles.resizedInput} name="message" />
-          <input type="submit" value="Envoyer" onClick="Merci pour votre message" />
+          <input type="submit" value="Envoyer" onClick={onPressMessage} />
         </form>
       </div>
     </div>
