@@ -4,6 +4,8 @@
 }
 .contactForm {
   background-color: #2a9d8f;
+  display: flex;
+  justify-content: center;
 }
 .squad {
   background-color: #e9c46a;
@@ -25,4 +27,9 @@ li {
   height: 15vh;
   width: auto;
   border-radius: 3vh;
+}
+.resizedInput {
+  width: 200px;
+  height: 100px;
+  resize: none;
 }
