@@ -55,7 +55,7 @@ function AdressSearch() {
           className={styles.AdressSearchInput}
           placeholder="N°, Rue, CP et ville"
         ></input>
-        <input type="button" onClick={(e) => handleSubmit(e)} value="Rechercher" />
+        <input type="button" onClick={(e) => handleSubmit(e)} value="Rechercher" className={styles.AdressSearchButton} />
       </form>
     </div>
   );
