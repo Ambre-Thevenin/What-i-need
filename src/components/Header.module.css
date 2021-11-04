@@ -1,0 +1,8 @@
+.headerItems {
+  justify-items: center;
+}
+.logo {
+  height: 10vh;
+  width: auto;
+  border-radius: 3vh;
+}

@@ -1,0 +1,56 @@
+.body {
+  background-color: #2a9d8f;
+}
+.header {
+  text-align: center;
+  padding-bottom: 10%;
+  padding-top: 10%;
+}
+
+.main {
+  text-align: center;
+}
+
+.surprise {
+  padding-bottom: 10%;
+  font-style: italic;
+}
+
+.welcome {
+  padding-bottom: 10%;
+  font-style: italic;
+}
+
+.input {
+  padding-bottom: 10%;
+  font-style: italic;
+}
+.cards {
+  background-color: #e9c46a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 65vh;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+}
+
+.card {
+  max-width: 35%;
+  max-height: 35%;
+  border-radius: 20%;
+}
