@@ -1,0 +1,131 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 75px;
+  padding: 1rem;
+  /* background-color: #2A9D8F; */
+  color: black;
+}
+
+.navbar_links {
+  display: flex;
+}
+
+.navbar_links {
+  padding: 0 0.3rem;
+  color: inherit;
+}
+
+.navbar_burger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  display: none;
+}
+
+.nav_logo {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar_links {
+    border-radius: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    right: -100vw;
+
+    top: 69px;
+    width: 0;
+
+    padding: 2rem;
+    visibility: hidden;
+
+    transition: all 0.9s ease-in-out;
+  }
+
+  .show-nav .navbar_links {
+    width: 13vw;
+    right: 9vw;
+    visibility: visible;
+    background-color: #2a9d8f;
+  }
+  .navbar_links {
+    display: block;
+    padding: 1.5rem;
+  }
+
+  .navbar_burger {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 3rem;
+  }
+  .navbar_burger:hover {
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+  }
+  .burger-nav {
+    display: block;
+    padding: 1px 20px 1px 20px;
+    height: 7px;
+    position: relative;
+    border-radius: 3px;
+    background: #e9c46a;
+  }
+
+  .burger-nav::before,
+  .burger-nav::after {
+    display: block;
+    padding: 2px 20px 2px 20px;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    background: #e9c46a;
+    transition: all 0.5s ease-in-out;
+  }
+  .burger-nav::before,
+  .burger-nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+  .burger-nav::before {
+    transform: translateY(-12px);
+  }
+  .burger-nav::after {
+    transform: translateY(12px);
+  }
+
+  .show-nav .burger-nav {
+    background: transparent;
+  }
+
+  .show-nav .burger-nav::before {
+    transform: rotate(45deg);
+  }
+
+  .show-nav .burger-nav::after {
+    transform: rotate(-45deg);
+  }
+
+  .nav_logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  a {
+    text-decoration: none;
+    color: burlywood;
+  }
+}
