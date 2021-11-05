@@ -26,6 +26,7 @@
   border: none;
   color: inherit;
   display: none;
+  position: fixed;
 }
 
 .nav_logo {

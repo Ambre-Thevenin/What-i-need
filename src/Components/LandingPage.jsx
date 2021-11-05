@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './LandingPage.module.css';
+
 import CurrentDate from './Date';
 import StartAstroPage from './ModuleAstro';
 import StartMeteoPage from './ModuleMeteo';
@@ -8,12 +8,13 @@ import StartSNCFPage from './ModuleSNCF';
 import AdressSearch from './AdressSearch';
 import Nav from '../components/Nav';
 
+import styles from './LandingPage.module.css';
+
 function LandingPage() {
   return (
     <main className={styles.main}>
       <header className={styles.header}>
-        {' '}
-        <Nav />{' '}
+        <Nav />
       </header>
 
       <div className={styles.surprise}>Surprise</div>
@@ -21,8 +22,7 @@ function LandingPage() {
         <CurrentDate />
       </div>
       <div className={styles.input}>
-        {' '}
-        <AdressSearch />{' '}
+        <AdressSearch />
       </div>
 
       <div className={styles.cards}>
