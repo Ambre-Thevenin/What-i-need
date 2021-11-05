@@ -1,5 +1,7 @@
-.body {
+.main {
   background-color: #2a9d8f;
+  height: 100vh;
+  width: 100vw;
 }
 .header {
   text-align: center;
@@ -7,23 +9,20 @@
   padding-top: 10%;
 }
 
-.main {
+.surprise {
+  font-style: italic;
   text-align: center;
 }
 
-.surprise {
-  padding-bottom: 10%;
-  font-style: italic;
-}
-
 .welcome {
-  padding-bottom: 10%;
   font-style: italic;
+  text-align: center;
 }
 
 .input {
-  padding-bottom: 10%;
   font-style: italic;
+  text-align: center;
+  padding-bottom: 10%;
 }
 .cards {
   background-color: #e9c46a;
@@ -32,7 +31,8 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  height: 65vh;
+  text-align: center;
+  height: 100vh;
   animation-duration: 3s;
   animation-name: slidein;
 }
@@ -50,7 +50,19 @@
 }
 
 .card {
-  max-width: 35%;
-  max-height: 35%;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.mainCard {
+  width: 100vh;
+  height: 100vh;
+  position: absolute;
+  background-color: #e9c46a;
+}
+
+.imgCard {
+  max-width: 80%;
+  max-height: 80%;
   border-radius: 20%;
 }
