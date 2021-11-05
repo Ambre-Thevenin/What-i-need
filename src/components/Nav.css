@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: center;
 
-  /* width: 100%; */
+  width: 100%;
   min-height: 75px;
   padding: 1rem;
-  background-color: #2a9d8f;
+  /* background-color: #2A9D8F; */
   color: black;
 }
 
@@ -32,7 +32,6 @@
 .nav_logo {
   width: 200px;
   height: 200px;
-  border: 3vh;
 }
 
 @media screen and (max-width: 767px) {
@@ -74,7 +73,7 @@
   .navbar_burger:hover {
     cursor: pointer;
     position: fixed;
-    /* top: 1rem; */
+    top: 1rem;
   }
   .burger-nav {
     display: block;
@@ -123,7 +122,6 @@
   .nav_logo {
     width: 80px;
     height: 80px;
-    border-radius: 3vh;
   }
 
   a {
