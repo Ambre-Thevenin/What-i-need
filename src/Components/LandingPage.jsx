@@ -6,11 +6,15 @@ import StartMeteoPage from './ModuleMeteo';
 import StartShopsPage from './ModuleShops';
 import StartSNCFPage from './ModuleSNCF';
 import AdressSearch from './AdressSearch';
+import Nav from '../components/Nav';
 
 function LandingPage() {
   return (
     <main className={styles.main}>
-      <header className={styles.header}> Mettre ici le Logo, le burger et le +</header>
+      <header className={styles.header}>
+        {' '}
+        <Nav />{' '}
+      </header>
 
       <div className={styles.surprise}>Surprise</div>
       <div className={styles.welcome}>
