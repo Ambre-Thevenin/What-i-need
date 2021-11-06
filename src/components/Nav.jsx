@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import logo_WIN from './logo_WIN.png';
+
 import './Nav.css';
-import { useState } from 'react';
-import logo from './logo_WIN.png';
+
 function Nav() {
   const [showLinks, setShowLinks] = useState(false);
 
@@ -11,7 +13,7 @@ function Nav() {
 
   return (
     <nav className={`navbar ${showLinks ? 'show-nav' : 'hide-nav'} `}>
-      <img className="nav_logo" src={logo} alt="Hello" />
+      <img className="nav_logo" src={logo_WIN} alt="Hello" />
       <ul className="navbar_links">
         <li className="navbar_item">
           <a href="/" className="navbar_link">
