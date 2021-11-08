@@ -12,10 +12,10 @@ function App() {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/Components/LandingPage" component={LandingPage}>
+            <Route exact path="/" component={LandingPage}>
               <LandingPage />
             </Route>
-            <Route path="/Components/LandingPage/About" component={(WinSquad, ContactForm)}>
+            <Route path="/About" component={(WinSquad, ContactForm)}>
               <WinSquad />
               <ContactForm />
             </Route>
