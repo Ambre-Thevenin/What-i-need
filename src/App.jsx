@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingPage from './Components/LandingPage';
+import LandingPage from './components/LandingPage';
 import './App.css';
 import ContactForm from './components/contactForm';
 // import Nav from './components/Nav';
