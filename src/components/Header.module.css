@@ -1,5 +1,7 @@
 .headerItems {
-  justify-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #2a9d8f;
 }
 .logo {
   height: 10vh;
