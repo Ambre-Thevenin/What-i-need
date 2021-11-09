@@ -4,24 +4,20 @@ import './App.css';
 import ContactForm from './components/contactForm';
 // import Nav from './components/Nav';
 import WinSquad from './components/squadPictures';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+// import MeteoForecast from './Components/MeteoForecast';
 
 function App() {
   return (
     <div>
-      <Router>
-        <div>
-          <Switch>
-            <Route exact path="/" component={LandingPage}>
-              <LandingPage />
-            </Route>
-            <Route path="/About" component={(WinSquad, ContactForm)}>
-              <WinSquad />
-              <ContactForm />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+      <Switch>
+        <Route exact path="/" component={LandingPage}></Route>
+        <Route path="/About">
+          <WinSquad />
+          <ContactForm />
+        </Route>
+      </Switch>
+      {/* <MeteoForecast /> */}
     </div>
   );
 }
