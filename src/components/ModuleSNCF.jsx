@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
+import SNCFSearch from './SNCFSearch';
 import styles from './LandingPage.module.css';
 
 function StartSNCFPage() {
@@ -21,7 +22,8 @@ function StartSNCFPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setSNCFPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL SNCF</p>{' '}
+
+        <SNCFSearch />
       </div>
     );
   }

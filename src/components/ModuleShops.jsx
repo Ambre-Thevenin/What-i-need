@@ -22,7 +22,7 @@ function StartShopsPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setShopsPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL SHOPS</p>{' '}
+        <p> TEST SPECIAL SHOPS</p>
       </div>
     );
   }

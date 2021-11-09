@@ -22,7 +22,7 @@ function StartMeteoPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setMeteoPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL METEO</p>{' '}
+        <p> TEST SPECIAL METEO</p>
       </div>
     );
   }

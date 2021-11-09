@@ -22,7 +22,7 @@ function StartAstroPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setAstroPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL ASTRO</p>{' '}
+        <p> TEST SPECIAL ASTRO</p>
       </div>
     );
   }
