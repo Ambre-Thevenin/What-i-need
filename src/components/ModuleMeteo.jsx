@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
+import MeteoForecast from './MeteoForecast';
 import styles from './LandingPage.module.css';
 
 function StartMeteoPage() {
@@ -22,7 +23,7 @@ function StartMeteoPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setMeteoPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL METEO</p>
+        <MeteoForecast />
       </div>
     );
   }

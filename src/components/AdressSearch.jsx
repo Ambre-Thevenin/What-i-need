@@ -3,19 +3,18 @@ import axios from 'axios';
 import styles from './AdressSearch.module.css';
 
 const api_geo = 'ba8deb2152e71c554c801f9aecc3805b';
+//http://api.positionstack.com/v1/forward?access_key=ba8deb2152e71c554c801f9aecc3805b&query=44%20Rue%20Alphonse%20Penaud%207520%20Paris&limit=10&output=json&country=FR
 
-function AdressSearch() {
-  const [originData, setOriginData] = useState();
+function AdressSearch({ origin, destination, handleSubmit }) {
   const [firstQuery, setFirstQuery] = useState('');
   const [secondQuery, setSecondQuery] = useState('');
-  const [destinationData, setDestinationData] = useState();
 
   useEffect(() => {
     axios
       .get(`http://api.positionstack.com/v1/forward?access_key=${api_geo}&query=${firstQuery}&limit=10&output=json&country=FR`)
       .then((res) => res.data)
       .then((data) => {
-        setOriginData(data.data[0]);
+        origin(data.data[0]);
       });
   }, [firstQuery]);
 
@@ -24,15 +23,9 @@ function AdressSearch() {
       .get(`http://api.positionstack.com/v1/forward?access_key=${api_geo}&query=${secondQuery}&limit=10&output=json&country=FR`)
       .then((res) => res.data)
       .then((data) => {
-        setDestinationData(data.data[0]);
+        destination(data.data[0]);
       });
   }, [secondQuery]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    localStorage.setItem('origin', originData);
-    localStorage.setItem('destination', destinationData);
-  };
 
   return (
     <div>
