@@ -6,15 +6,16 @@ import styles from './LandingPage.module.css';
 
 function StartMeteoPage() {
   const [meteoPage, setMeteoPage] = useState('isHidden');
+  const [weatherIcon, setWeatherIcon] = useState();
 
   if (meteoPage === 'isHidden') {
     return (
       <div className={styles.card}>
         <img
-          src="https://www.radars-auto.com/carte-radar/carte-france-index.png"
+          src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
           role="button"
           alt="cardMeteo"
-          className={styles.imgCard}
+          className={styles.cardMeteo}
           onClick={() => setMeteoPage('!isHidden')}
         />
       </div>
@@ -23,7 +24,7 @@ function StartMeteoPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setMeteoPage('isHidden')}>Exit</button>
-        <MeteoForecast />
+        <MeteoForecast setIcon={setWeatherIcon} icon={weatherIcon} />
       </div>
     );
   }

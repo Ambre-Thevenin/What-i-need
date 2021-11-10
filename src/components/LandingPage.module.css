@@ -62,7 +62,15 @@
 }
 
 .imgCard {
+  max-width: 40%;
+  max-height: 40%;
+  border-radius: 20%;
+}
+
+.cardMeteo {
   max-width: 80%;
   max-height: 80%;
   border-radius: 20%;
+  background-color: #f4a261;
+  opacity: 75%;
 }

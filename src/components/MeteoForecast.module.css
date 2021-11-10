@@ -1,0 +1,15 @@
+.forecastScreen {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .forecastScreen img {
+    width:10vw;
+    height: 10wh;
+} */
+
+.forecastTitle {
+  font-size: 24px;
+  margin: 5%;
+  color: blue;
+}
