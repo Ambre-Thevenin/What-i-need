@@ -1,21 +1,40 @@
 import React, { useState } from 'react';
-import Jokes from './JokesArray';
+import AstroJokes from './JokesArray';
 
 function RandomJokes() {
   const FirstToSee = 'Voulez-vous rire ?';
   const [textValue, setTextValue] = useState(FirstToSee);
-  const SingleJoke = [...Jokes];
+  const SingleJoke = [...AstroJokes];
 
-  const changeTextValue = () => {
+  const changeJokesValue = (filter) => {
     const len = SingleJoke.length;
-    setTextValue(SingleJoke[Math.floor(Math.random() * len)].text);
+    const joke = SingleJoke[Math.floor(Math.random() * len)];
+    if (joke.type === filter) {
+      setTextValue(joke.text);
+    } else {
+      changeJokesValue(filter);
+    }
   };
+
+  // const changeTextValue = () => {
+  //   const len = SingleJoke.length;
+  //   const joke = SingleJoke[Math.floor(Math.random() * len)];
+  //   if (joke.type === 'Astres') {
+  //     console.log('Astres');
+  //     setTextValue(joke.text);
+  //   } else {
+  //     changeTextValue();
+  //   }
+  // };
 
   return (
     <div>
       <p>{textValue}</p>
-      <button onClick={changeTextValue} value="Click">
-        Click
+      <button onClick={() => changeJokesValue('Jokes')} value="Click">
+        Je veux rire
+      </button>
+      <button onClick={() => changeJokesValue('Astres')} value="Click">
+        Un message des astres
       </button>
     </div>
   );

@@ -4,6 +4,8 @@ import { Route, Switch } from 'react-router-dom';
 import ContactForm from './components/contactForm';
 import WinSquad from './components/squadPictures';
 
+import AstroJokes from './components/jokes';
+
 import './App.css';
 
 // import MeteoForecast from './Components/MeteoForecast';
@@ -15,13 +17,15 @@ function App() {
         <Switch>
           <Route exact path="/">
             <LandingPage />
+            {/*Test*/}
+            <AstroJokes />
           </Route>
           <Route path="/About">
             <WinSquad />
             <ContactForm />
           </Route>
         </Switch>
-    {/* <MeteoForecast /> */}
+        {/* <MeteoForecast /> */}
       </div>
     </div>
   );
