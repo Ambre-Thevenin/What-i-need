@@ -1,30 +1,32 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
+import MeteoForecast from './MeteoForecast';
 import styles from './LandingPage.module.css';
 
-function StartSNCFPage() {
-  const [SNCFPage, setSNCFPage] = useState('isHidden');
-  if (SNCFPage === 'isHidden') {
+function StartMeteoPage() {
+  const [meteoPage, setMeteoPage] = useState('isHidden');
+
+  if (meteoPage === 'isHidden') {
     return (
       <div className={styles.card}>
         <img
           src="https://www.radars-auto.com/carte-radar/carte-france-index.png"
           role="button"
-          alt="cardSNCF"
+          alt="cardMeteo"
           className={styles.imgCard}
-          onClick={() => setSNCFPage('!isHidden')}
+          onClick={() => setMeteoPage('!isHidden')}
         />
       </div>
     );
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setSNCFPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL SNCF</p>{' '}
+        <button onClick={() => setMeteoPage('isHidden')}>Exit</button>
+        <MeteoForecast />
       </div>
     );
   }
 }
 
-export default StartSNCFPage;
+export default StartMeteoPage;

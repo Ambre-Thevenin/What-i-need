@@ -2,31 +2,30 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
 import styles from './LandingPage.module.css';
-import MeteoForecast from './MeteoForecast';
 
-function StartMeteoPage() {
-  const [meteoPage, setMeteoPage] = useState('isHidden');
+function StartAstroPage() {
+  const [astroPage, setAstroPage] = useState('isHidden');
 
-  if (meteoPage === 'isHidden') {
+  if (astroPage === 'isHidden') {
     return (
       <div className={styles.card}>
         <img
           src="https://www.radars-auto.com/carte-radar/carte-france-index.png"
           role="button"
-          alt="cardMeteo"
+          alt="cardAstro"
           className={styles.imgCard}
-          onClick={() => setMeteoPage('!isHidden')}
+          onClick={() => setAstroPage('!isHidden')}
         />
       </div>
     );
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setMeteoPage('isHidden')}>Exit</button>
-        <MeteoForecast />
+        <button onClick={() => setAstroPage('isHidden')}>Exit</button>
+        <p> TEST SPECIAL ASTRO</p>
       </div>
     );
   }
 }
 
-export default StartMeteoPage;
+export default StartAstroPage;
