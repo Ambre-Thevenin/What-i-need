@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
 import styles from './LandingPage.module.css';
+import MeteoForecast from './MeteoForecast';
 
 function StartMeteoPage() {
   const [meteoPage, setMeteoPage] = useState('isHidden');
@@ -22,7 +23,7 @@ function StartMeteoPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setMeteoPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL METEO</p>{' '}
+        <MeteoForecast />
       </div>
     );
   }
