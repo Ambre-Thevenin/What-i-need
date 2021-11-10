@@ -11,14 +11,18 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path="/" component={LandingPage}></Route>
-        <Route path="/About">
-          <WinSquad />
-          <ContactForm />
-        </Route>
-      </Switch>
-      {/* <MeteoForecast /> */}
+      <div>
+        <Switch>
+          <Route exact path="/">
+            <LandingPage />
+          </Route>
+          <Route path="/About">
+            <WinSquad />
+            <ContactForm />
+          </Route>
+        </Switch>
+    {/* <MeteoForecast /> */}
+      </div>
     </div>
   );
 }
