@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
+import RandomJokes from './jokes';
+
 import styles from './LandingPage.module.css';
 
 function StartAstroPage() {
@@ -23,6 +25,7 @@ function StartAstroPage() {
       <div className={styles.mainCard}>
         <button onClick={() => setAstroPage('isHidden')}>Exit</button>
         <p> TEST SPECIAL ASTRO</p>
+        <RandomJokes />
       </div>
     );
   }

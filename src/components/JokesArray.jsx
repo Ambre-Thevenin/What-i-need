@@ -11,11 +11,22 @@ const AstroJokes = [
   { type: 'Jokes', text: "Comment appelle-t-on un chat qui va dans l'espace ? Un chat tellite, Yann", key: 10 },
   { type: 'Jokes', text: "Pourquoi quand on lance de l'ail, il revient toujours ? C'est le retour du Jedi (jet d'ail), Yann", key: 11 },
   { type: 'Jokes', text: "Personne n'est nul part, Paul-Emmanuel", key: 12 },
-  { type: 'Astres', text: 'RandomCestChiant', key: 13 },
-  { type: 'Astres', text: 'Poisson', key: 14 },
-  { type: 'Astres', text: 'Cancer', key: 15 },
-  { type: 'Astres', text: 'Gémeaux', key: 16 },
+  {
+    type: 'Astres',
+    text: 'Célibataire, vous aurez une aventure avec un conseiller en gestion de patrimoine qui s’appelle Thierry. En couple, vous mangerez des cookies goût thon-mayonnaise.',
+    key: 13,
+  },
+  {
+    type: 'Astres',
+    text: 'La NASA vous propulsera dans l’espace pour faire dévier un astéroïde qui fonce vers la Terre. Une semaine pas ouf.',
+    key: 14,
+  },
+  { type: 'Astres', text: 'Vous ferez une fugue pour enfin faire votre crise d’adolescence correctement.', key: 15 },
+  { type: 'Astres', text: 'Vous achèterez la dernière baguette tradition de la boulangerie. Vous vous ferez pas mal d’ennemis.', key: 16 },
+  {
+    type: 'Astres',
+    text: 'Vous donnerez des coups de pieds à un enfant venu demander des bonbons pour Halloween. Ce ne sera pas bon pour votre karma, mais cela vous soulagera après une dure journée de travail.',
+    key: 17,
+  },
 ];
 export default AstroJokes;
-
-// les astres vous disent ou blague - filter blague ou astres random ds le filter pr element.type = astro --- Aujourd'hui les astres vous disent

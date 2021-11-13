@@ -1,0 +1,16 @@
+.button {
+  background-color: #f4a261;
+  border-radius: 5px;
+  border-style: none;
+  padding: 8px;
+}
+.text {
+  flex-wrap: wrap;
+  font-size: large;
+  padding: 10px;
+}
+.astrojokesmodule {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
