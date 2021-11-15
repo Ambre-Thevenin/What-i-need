@@ -1,12 +1,19 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MeteoForecast from './MeteoForecast';
 import styles from './LandingPage.module.css';
+import axios from 'axios';
 
-function StartMeteoPage() {
+function StartMeteoPage({ destination, city }) {
+  const api_weather = 'a007f6ea1885d8331305baf19e99c488';
   const [meteoPage, setMeteoPage] = useState('isHidden');
   const [weatherIcon, setWeatherIcon] = useState();
+
+  useEffect(async () => {
+    const result = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_weather}&units=metric&lang=fr`);
+    setWeatherIcon(result.data.weather[0].icon);
+  }, [city]);
 
   if (meteoPage === 'isHidden') {
     return (
@@ -23,8 +30,8 @@ function StartMeteoPage() {
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setMeteoPage('isHidden')}>Exit</button>
-        <MeteoForecast setIcon={setWeatherIcon} icon={weatherIcon} />
+        <button onClick={() => setMeteoPage('isHidden')}>X</button>
+        <MeteoForecast setIcon={setWeatherIcon} icon={weatherIcon} destination={destination} city={city} />
       </div>
     );
   }
