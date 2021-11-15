@@ -26,6 +26,7 @@ function LandingPage() {
     localStorage.setItem('origin', originData);
     localStorage.setItem('destination', destinationData);
   };
+  // eslint-disable-next-line no-console
 
   return (
     <main className={styles.main}>
@@ -42,8 +43,14 @@ function LandingPage() {
       </div>
 
       <div className={styles.cards}>
-        <StartSNCFPage />
-
+        {originData && destinationData && (
+          <StartSNCFPage
+            departureLatitude={originData.latitude}
+            departureLongitude={originData.longitude}
+            arrivalLatitude={destinationData.latitude}
+            arrivalLongitude={destinationData.longitude}
+          />
+        )}
         <StartMeteoPage />
 
         <StartShopsPage />
