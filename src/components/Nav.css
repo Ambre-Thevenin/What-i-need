@@ -53,10 +53,11 @@
   }
 
   .show-nav .navbar_links {
+    height: 30vw;
     width: 13vw;
     right: 9vw;
     visibility: visible;
-    background-color: #2a9d8f;
+    background-color: #e9c46a;
   }
   .navbar_links {
     display: block;
@@ -128,3 +129,4 @@
     color: burlywood;
   }
 }
+
