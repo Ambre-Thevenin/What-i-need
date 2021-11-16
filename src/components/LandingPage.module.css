@@ -50,8 +50,8 @@
 }
 
 .card {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 25%;
+  max-height: 25%;
 }
 
 .mainCard {
@@ -73,4 +73,8 @@
   border-radius: 20%;
   background-color: #f4a261;
   opacity: 75%;
+}
+
+.hiddenCard {
+  display: none;
 }

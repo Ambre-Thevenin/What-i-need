@@ -24,7 +24,7 @@ function MeteoForecast({ setIcon, icon, city }) {
     <div className={styles.forecastScreen}>
       <h1 className={styles.forecastTitle}>A {userCity}, la météo prévoit</h1>
       <p>Tendance générale : {currentWeather}</p>
-      <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt={currentWeather} />
+      <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt={currentWeather} className={styles.forecastIcon} />
       <p>Temperature actuelle : {currentTemp} °C</p>
       <HourlyMeteo />
     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-// import HourForecast from './HourForecast';
+import styles from './HourForecast.module.css';
 
 const api_weather = 'a007f6ea1885d8331305baf19e99c488';
 
@@ -20,9 +20,9 @@ function HourlyMeteo() {
       });
   }, []);
 
-  let forecastHours = forecast.slice(0, 9);
+  let forecastHours = forecast.slice(0, 8);
   return (
-    <>
+    <div className={styles.hourlyMeteo}>
       {forecastHours.length &&
         forecastHours.map((hour) => {
           return (
@@ -32,7 +32,7 @@ function HourlyMeteo() {
             </div>
           );
         })}
-    </>
+    </div>
   );
 }
 

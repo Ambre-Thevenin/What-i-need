@@ -1,0 +1,10 @@
+.hourlyMeteo {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+}
+
+.hourlyMeteo img {
+  width: 15vw;
+  height: 15vh;
+}
