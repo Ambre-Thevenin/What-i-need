@@ -1,6 +1,9 @@
 .body {
   background-color: #2a9d8f;
 }
+.header {
+  background-color: #2a9d8f;
+}
 
 /* PICTURES */
 
@@ -12,9 +15,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-li {
-  display: none;
-}
+
 .pictures {
   display: flex;
   flex-wrap: wrap;

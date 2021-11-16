@@ -33,7 +33,6 @@ function LandingPage() {
         <Nav />
       </header>
 
-      <div className={styles.surprise}>Surprise</div>
       <div className={styles.welcome}>
         <CurrentDate />
       </div>

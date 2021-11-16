@@ -37,12 +37,12 @@ function Nav() {
         </li>
         <li className="navbar_item">
           <a href="/" className="navbar_link">
-            Astro
+            Surprise
           </a>
         </li>
         <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            About
+          <a href="/about" className="navbar_link">
+            A propos
           </a>
         </li>
       </ul>
