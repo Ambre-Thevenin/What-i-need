@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import SNCFSearch from './SNCFSearch';
 import styles from './LandingPage.module.css';
 
-function StartSNCFPage() {
+function StartSNCFPage({ departureLatitude, departureLongitude, arrivalLatitude, arrivalLongitude }) {
   const [SNCFPage, setSNCFPage] = useState('isHidden');
   if (SNCFPage === 'isHidden') {
     return (
@@ -22,8 +22,12 @@ function StartSNCFPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setSNCFPage('isHidden')}>Exit</button>
-
-        <SNCFSearch />
+        <SNCFSearch
+          departureLatitude={departureLatitude}
+          departureLongitude={departureLongitude}
+          arrivalLatitude={arrivalLatitude}
+          arrivalLongitude={arrivalLongitude}
+        />
       </div>
     );
   }

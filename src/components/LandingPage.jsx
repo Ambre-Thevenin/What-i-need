@@ -29,6 +29,12 @@ function LandingPage() {
     localStorage.setItem('destination', JSON.stringify(destinationData));
     localStorage.setItem('city', userCity);
   };
+  // eslint-disable-next-line no-console
+
+  /*console.log(originData.latitude);
+  console.log(originData.longitude);
+  console.log(destinationData.latitude);
+  console.log(destinationData.longitude);*/
 
   return (
     <main className={styles.main}>
@@ -44,8 +50,14 @@ function LandingPage() {
       </div>
 
       <div className={styles.cards}>
-        <StartSNCFPage />
-
+        {originData && destinationData && (
+          <StartSNCFPage
+            departureLatitude={originData.latitude}
+            departureLongitude={originData.longitude}
+            arrivalLatitude={destinationData.latitude}
+            arrivalLongitude={destinationData.longitude}
+          />
+        )}
         <StartMeteoPage destination={destinationData} city={userCity} />
 
         <StartShopsPage />
