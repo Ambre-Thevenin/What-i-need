@@ -12,13 +12,13 @@ function StartAstroPage() {
   if (astroPage === 'collapsed') {
     return (
       <div className={styles.card}>
-        <img src={sparkles_icon} alt="sparkle icon" role="button" className={styles.imgCard} onClick={() => setAstroPage('opened')} />
+        <img src={sparkles_icon} alt="sparkle icon" role="button" className={styles.sparkleCard} onClick={() => setAstroPage('opened')} />
       </div>
     );
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setAstroPage('collapsed')}>Exit</button>
+        <button onClick={() => setAstroPage('collapsed')}>X</button>
         <p> DES MESSAGES OU UNE FARCE</p>
         <RandomJokes />
       </div>
