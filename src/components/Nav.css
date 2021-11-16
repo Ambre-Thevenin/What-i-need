@@ -40,6 +40,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
+    list-style: none;
 
     right: -100vw;
 
@@ -59,6 +60,7 @@
     visibility: visible;
     background-color: #e9c46a;
   }
+
   .navbar_links {
     display: block;
     padding: 1.5rem;
@@ -126,7 +128,6 @@
 
   a {
     text-decoration: none;
-    color: burlywood;
+    color: black;
   }
 }
-

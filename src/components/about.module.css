@@ -12,9 +12,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-li {
-  display: none;
-}
+
 .pictures {
   display: flex;
   flex-wrap: wrap;

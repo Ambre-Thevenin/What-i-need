@@ -26,7 +26,7 @@ function Nav() {
           </a>
         </li>
         <li className="navbar_item">
-          <a href="/" className="navbar_link">
+          <a href="/Meteo" className="navbar_link">
             Meteo
           </a>
         </li>
@@ -37,11 +37,11 @@ function Nav() {
         </li>
         <li className="navbar_item">
           <a href="/" className="navbar_link">
-            Astro
+            Surprise
           </a>
         </li>
         <li className="navbar_item">
-          <a href="/" className="navbar_link">
+          <a href="/About" className="navbar_link">
             About
           </a>
         </li>
