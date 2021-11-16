@@ -28,6 +28,11 @@ function LandingPage() {
   };
   // eslint-disable-next-line no-console
 
+  /*console.log(originData.latitude);
+  console.log(originData.longitude);
+  console.log(destinationData.latitude);
+  console.log(destinationData.longitude);*/
+
   return (
     <main className={styles.main}>
       <header className={styles.header}>
