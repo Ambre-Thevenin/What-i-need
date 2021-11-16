@@ -1,3 +1,7 @@
+/* .astrojokesmodule {
+  display: flex;
+  flex-direction: column;
+} */
 .button {
   background-color: #f4a261;
   border-radius: 5px;
@@ -9,8 +13,22 @@
   font-size: large;
   padding: 10px;
 }
-.astrojokesmodule {
+.br {
   display: flex;
-  flex-direction: column;
+  /* position: fixed; */
+  left: 0;
+  right: 0;
   justify-content: space-around;
+}
+.cardJokes {
+  background-color: chartreuse;
+  width: 15px;
+}
+.cardJokes {
+  /* max-width: 45%;
+  max-height: 45%;
+  border-radius: 20%;
+  background-color: #f4a261;
+  opacity: 75%;
+  padding: 4px; */
 }

@@ -20,12 +20,14 @@ function RandomJokes() {
   return (
     <div className={styles.astrojokesmodule}>
       <p className={styles.text}>{textValue}</p>
-      <button className={styles.button} onClick={() => changeJokesValue('Jokes')} value="Click">
-        Je veux rire
-      </button>
-      <button className={styles.button} onClick={() => changeJokesValue('Astres')} value="Click">
-        Un message des astres
-      </button>
+      <div className={styles.br}>
+        <button className={styles.button} onClick={() => changeJokesValue('Jokes')} value="Click">
+          Je veux rire
+        </button>
+        <button className={styles.button} onClick={() => changeJokesValue('Astres')} value="Click">
+          Un message des astres
+        </button>
+      </div>
     </div>
   );
 }

@@ -2,17 +2,8 @@
   background-color: #2a9d8f;
 }
 
-.contactForm {
-  background-color: #2a9d8f;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+/* PICTURES */
+
 .squad {
   background-color: #e9c46a;
   height: 55vh;
@@ -35,6 +26,21 @@ li {
   width: auto;
   border-radius: 3vh;
 }
+
+/* FORM */
+
+.contactForm {
+  background-color: #2a9d8f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .resizedInput {
   width: 200px;
   height: 100px;
