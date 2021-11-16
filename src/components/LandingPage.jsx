@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CurrentDate from './Date';
-import StartAstroPage from './ModuleAstro';
+import StartAstroPage from './ModuleSparkle';
 import StartMeteoPage from './ModuleMeteo';
 import StartShopsPage from './ModuleShops';
 import StartSNCFPage from './ModuleSNCF';
