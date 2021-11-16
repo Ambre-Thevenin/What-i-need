@@ -49,9 +49,9 @@ function Nav() {
       <button className="navbar_burger" onClick={handleShowLinks}>
         <span className="burger-nav"></span>
       </button>
-      <button className="navbar_burger" onClick={handleShowLinks}>
+      {/* <button className="navbar_burger" onClick={handleShowLinks}>
         <span className="burger-plus"></span>
-      </button>
+      </button> */}
     </nav>
   );
 }
