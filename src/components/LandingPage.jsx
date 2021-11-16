@@ -10,8 +10,9 @@ import Nav from './Nav';
 import styles from './LandingPage.module.css';
 
 function LandingPage() {
-  const [destinationData, setDestinationData] = useState();
-  const [originData, setOriginData] = useState();
+  const [destinationData, setDestinationData] = useState(localStorage.getItem('destination'));
+  const [originData, setOriginData] = useState(localStorage.getItem('origin'));
+  const [userCity, setUserCity] = useState(localStorage.getItem('city'));
 
   function handleOrigin(adress) {
     setOriginData(adress);
@@ -19,12 +20,14 @@ function LandingPage() {
 
   function handleDestination(adress) {
     setDestinationData(adress);
+    setUserCity(adress.locality);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('origin', originData);
-    localStorage.setItem('destination', destinationData);
+    localStorage.setItem('origin', JSON.stringify(originData));
+    localStorage.setItem('destination', JSON.stringify(destinationData));
+    localStorage.setItem('city', userCity);
   };
   // eslint-disable-next-line no-console
 
@@ -39,7 +42,6 @@ function LandingPage() {
         <Nav />
       </header>
 
-      <div className={styles.surprise}>Surprise</div>
       <div className={styles.welcome}>
         <CurrentDate />
       </div>
@@ -56,7 +58,7 @@ function LandingPage() {
             arrivalLongitude={destinationData.longitude}
           />
         )}
-        <StartMeteoPage />
+        <StartMeteoPage destination={destinationData} city={userCity} />
 
         <StartShopsPage />
 

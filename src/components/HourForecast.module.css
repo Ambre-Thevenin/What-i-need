@@ -1,0 +1,15 @@
+.hourlyMeteo {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+}
+
+.hourlyMeteo img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.timeTemp {
+  font-size: 14px;
+  font-style: italic;
+}
