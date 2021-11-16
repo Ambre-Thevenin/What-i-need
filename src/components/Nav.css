@@ -39,7 +39,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    /* position: fixed; */
 
     right: -100vw;
 
@@ -50,13 +50,14 @@
     visibility: hidden;
 
     transition: all 0.9s ease-in-out;
+    list-style: none;
   }
 
   .show-nav .navbar_links {
     width: 13vw;
     right: 9vw;
     visibility: visible;
-    background-color: #2a9d8f;
+    background-color: #e9c46a;
   }
   .navbar_links {
     display: block;
@@ -65,13 +66,13 @@
 
   .navbar_burger {
     display: block;
-    position: fixed;
+    /* position: fixed; */
     top: 1rem;
     right: 3rem;
   }
   .navbar_burger:hover {
     cursor: pointer;
-    position: fixed;
+    /* position: fixed; */
     top: 1rem;
   }
   .burger-nav {
@@ -125,6 +126,6 @@
 
   a {
     text-decoration: none;
-    color: burlywood;
+    color: black;
   }
 }

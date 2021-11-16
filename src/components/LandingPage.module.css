@@ -59,6 +59,7 @@
   height: 100vh;
   position: absolute;
   background-color: #e9c46a;
+  border-radius: 2px;
 }
 
 .imgCard {
@@ -77,4 +78,12 @@
 
 .hiddenCard {
   display: none;
+}
+
+.sparkleCard {
+  width: 70%;
+  height: 70%;
+  background-color: #f4a261;
+  border-radius: 20%;
+  opacity: 75%;
 }
