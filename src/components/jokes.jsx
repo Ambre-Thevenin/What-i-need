@@ -1,22 +1,33 @@
 import React, { useState } from 'react';
-import Jokes from './JokesArray';
+import AstroJokes from './JokesArray';
+import styles from './jokes.module.css';
 
 function RandomJokes() {
-  const FirstToSee = 'Voulez-vous rire ?';
-  const [textValue, setTextValue] = useState(FirstToSee);
-  const SingleJoke = [...Jokes];
+  const FirstToSeeJokes = 'De quoi avez-vous besoin ?';
+  const [textValue, setTextValue] = useState(FirstToSeeJokes);
+  const SingleJoke = [...AstroJokes];
 
-  const changeTextValue = () => {
+  const changeJokesValue = (filter) => {
     const len = SingleJoke.length;
-    setTextValue(SingleJoke[Math.floor(Math.random() * len)].text);
+    const joke = SingleJoke[Math.floor(Math.random() * len)];
+    if (joke.type === filter) {
+      setTextValue(joke.text);
+    } else {
+      changeJokesValue(filter);
+    }
   };
 
   return (
-    <div>
-      <p>{textValue}</p>
-      <button onClick={changeTextValue} value="Click">
-        Click
-      </button>
+    <div className={styles.astrojokesmodule}>
+      <p className={styles.text}>{textValue}</p>
+      <div className={styles.br}>
+        <button className={styles.button} onClick={() => changeJokesValue('Jokes')} value="Click">
+          Je veux rire
+        </button>
+        <button className={styles.button} onClick={() => changeJokesValue('Astres')} value="Click">
+          Un message des astres
+        </button>
+      </div>
     </div>
   );
 }
