@@ -11,18 +11,15 @@ import './App.css';
 function App() {
   return (
     <div>
-      <div>
-        <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-          <Route path="/About">
-            <WinSquad />
-            <ContactForm />
-          </Route>
-        </Switch>
-        {/* <MeteoForecast /> */}
-      </div>
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route path="/About">
+          <WinSquad />
+          <ContactForm />
+        </Route>
+      </Switch>
     </div>
   );
 }
