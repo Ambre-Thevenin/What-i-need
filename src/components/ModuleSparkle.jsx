@@ -7,18 +7,18 @@ import sparkles_icon from './assets/sparkles_icon.png';
 import styles from './LandingPage.module.css';
 
 function StartAstroPage() {
-  const [astroPage, setAstroPage] = useState('collapsed', 'opened');
+  const [astroPage, setAstroPage] = useState('isHidden');
 
-  if (astroPage === 'collapsed') {
+  if (astroPage === 'isHidden') {
     return (
       <div className={styles.card}>
-        <img src={sparkles_icon} alt="sparkle icon" role="button" className={styles.sparkleCard} onClick={() => setAstroPage('opened')} />
+        <img src={sparkles_icon} alt="sparkle icon" role="button" className={styles.imgCard} onClick={() => setAstroPage('!isHidden')} />
       </div>
     );
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setAstroPage('collapsed')}>X</button>
+        <button onClick={() => setAstroPage('isHidden')}>X</button>
         <p> DES MESSAGES OU UNE FARCE</p>
         <RandomJokes />
       </div>

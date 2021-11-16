@@ -22,8 +22,8 @@ function StartMeteoPage({ destination, city }) {
           src={`http://openweathermap.org/img/wn/${weatherIcon}@2x.png`}
           role="button"
           alt="cardMeteo"
-          className={styles.cardMeteo}
-          onClick={() => setMeteoPage('opened')}
+          className={styles.imgCard}
+          onClick={() => setMeteoPage('!collapsed')}
         />
       </div>
     );
