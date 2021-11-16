@@ -2,14 +2,21 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
+  align-items: center;
 }
 
 .forecastIcon {
   width: 30%;
   height: 30%;
+  margin: 3%;
 }
 
 .forecastTitle {
   font-size: 24px;
+  margin: 5%;
+}
+
+.forecastScreen h2 {
+  font-size: 20px;
   margin: 5%;
 }

@@ -5,6 +5,11 @@
 }
 
 .hourlyMeteo img {
-  width: 15vw;
-  height: 15vh;
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.timeTemp {
+  font-size: 14px;
+  font-style: italic;
 }
