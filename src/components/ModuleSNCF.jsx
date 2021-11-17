@@ -5,8 +5,8 @@ import SNCFSearch from './SNCFSearch';
 import styles from './LandingPage.module.css';
 
 function StartSNCFPage() {
-  const [SNCFPage, setSNCFPage] = useState('isHidden');
-  if (SNCFPage === 'isHidden') {
+  const [SNCFPage, setSNCFPage] = useState('collapsed');
+  if (SNCFPage === 'collapsed') {
     return (
       <div className={styles.card}>
         <img
@@ -14,14 +14,14 @@ function StartSNCFPage() {
           role="button"
           alt="cardSNCF"
           className={styles.imgCard}
-          onClick={() => setSNCFPage('!isHidden')}
+          onClick={() => setSNCFPage('opened')}
         />
       </div>
     );
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setSNCFPage('isHidden')}>Exit</button>
+        <button onClick={() => setSNCFPage('collapsed')}>Exit</button>
 
         <SNCFSearch />
       </div>

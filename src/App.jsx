@@ -7,8 +7,6 @@ import Nav from './components/Nav';
 
 import './App.css';
 
-// import MeteoForecast from './Components/MeteoForecast';
-
 function App() {
   return (
     <div>
@@ -23,7 +21,6 @@ function App() {
             <ContactForm />
           </Route>
         </Switch>
-        {/* <MeteoForecast /> */}
       </div>
     </div>
   );

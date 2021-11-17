@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Journey from './Journey';
 
-//const api_SNCF = '33c6537e-59dc-429c-af63-ce45208739c6';
+//UTILE API : const api_SNCF = '33c6537e-59dc-429c-af63-ce45208739c6';
 
 function SNCFSearch() {
   // eslint-disable-next-line no-unused-vars

@@ -7,7 +7,7 @@ import sparkles_icon from './assets/sparkles_icon.png';
 import styles from './LandingPage.module.css';
 
 function StartAstroPage() {
-  const [astroPage, setAstroPage] = useState('collapsed', 'opened');
+  const [astroPage, setAstroPage] = useState('collapsed');
 
   if (astroPage === 'collapsed') {
     return (

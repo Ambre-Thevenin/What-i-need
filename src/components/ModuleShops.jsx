@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import styles from './LandingPage.module.css';
 
 function StartShopsPage() {
-  const [shopsPage, setShopsPage] = useState('isHidden');
+  const [shopsPage, setShopsPage] = useState('collapsed');
 
-  if (shopsPage === 'isHidden') {
+  if (shopsPage === 'collapsed') {
     return (
       <div className={styles.card}>
         <img
@@ -14,14 +14,14 @@ function StartShopsPage() {
           role="button"
           alt="cardShops"
           className={styles.imgCard}
-          onClick={() => setShopsPage('!isHidden')}
+          onClick={() => setShopsPage('opened')}
         />
       </div>
     );
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setShopsPage('isHidden')}>Exit</button>
+        <button onClick={() => setShopsPage('collapsed')}>Exit</button>
         <p> TEST SPECIAL SHOPS</p>
       </div>
     );
