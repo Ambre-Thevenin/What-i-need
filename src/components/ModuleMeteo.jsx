@@ -8,7 +8,7 @@ import axios from 'axios';
 function StartMeteoPage({ destination, city }) {
   const api_weather = 'a007f6ea1885d8331305baf19e99c488';
   const [meteoPage, setMeteoPage] = useState('collapsed');
-  const [weatherIcon, setWeatherIcon] = useState();
+  const [weatherIcon, setWeatherIcon] = useState('02d');
 
   useEffect(async () => {
     const result = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_weather}&units=metric&lang=fr`);
