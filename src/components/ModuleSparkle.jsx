@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
 import RandomJokes from './jokes';
-import sparkles_icon from './assets/sparkles_icon.png';
+import sparkle_glitter from './assets/sparkle_glitter.png';
 
 import styles from './LandingPage.module.css';
 
@@ -12,7 +12,7 @@ function StartAstroPage() {
   if (astroPage === 'collapsed') {
     return (
       <div className={styles.card}>
-        <img src={sparkles_icon} alt="sparkle icon" role="button" className={styles.sparkleCard} onClick={() => setAstroPage('opened')} />
+        <img src={sparkle_glitter} alt="sparkle icon" role="button" className={styles.sparkleCard} onClick={() => setAstroPage('opened')} />
       </div>
     );
   } else {
