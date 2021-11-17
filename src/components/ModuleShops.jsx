@@ -7,12 +7,12 @@ import shopping_logo from './assets/shopping_logo.png';
 import styles from './LandingPage.module.css';
 
 function StartShopsPage({ arrivalLatitude, arrivalLongitude }) {
-  const [shopsPage, setShopsPage] = useState('collapsed', 'opened');
+  const [shopsPage, setShopsPage] = useState('collapsed');
 
   if (shopsPage === 'collapsed') {
     return (
       <div className={styles.card}>
-        <img src={shopping_logo} alt="Shops icon" role="button" className={styles.sparkleCard} onClick={() => setShopsPage('opened')} />
+        <img src={shopping_logo} alt="Shops icon" role="button" className={styles.imgCard} onClick={() => setShopsPage('opened')} />
       </div>
     );
   } else {

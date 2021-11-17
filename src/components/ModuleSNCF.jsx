@@ -7,11 +7,11 @@ import SNCF_logo from './assets/SNCF_logo.svg';
 import styles from './LandingPage.module.css';
 
 function StartSNCFPage({ departureLatitude, departureLongitude, arrivalLatitude, arrivalLongitude }) {
-  const [SNCFPage, setSNCFPage] = useState('collapsed', 'opened');
+  const [SNCFPage, setSNCFPage] = useState('collapsed');
   if (SNCFPage === 'collapsed') {
     return (
       <div className={styles.card}>
-        <img src={SNCF_logo} alt="SNCF icon" role="button" className={styles.sparkleCard} onClick={() => setSNCFPage('opened')} />
+        <img src={SNCF_logo} alt="SNCF icon" role="button" className={styles.imgCard} onClick={() => setSNCFPage('opened')} />
       </div>
     );
   } else {

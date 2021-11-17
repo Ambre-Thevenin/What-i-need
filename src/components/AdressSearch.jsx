@@ -3,7 +3,6 @@ import axios from 'axios';
 import styles from './AdressSearch.module.css';
 
 const api_geo = 'ba8deb2152e71c554c801f9aecc3805b';
-//http://api.positionstack.com/v1/forward?access_key=ba8deb2152e71c554c801f9aecc3805b&query=44%20Rue%20Alphonse%20Penaud%207520%20Paris&limit=10&output=json&country=FR
 
 function AdressSearch({ origin, destination, handleSubmit }) {
   const [firstQuery, setFirstQuery] = useState('');

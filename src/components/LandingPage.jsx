@@ -5,8 +5,6 @@ import StartMeteoPage from './ModuleMeteo';
 import StartShopsPage from './ModuleShops';
 import StartSNCFPage from './ModuleSNCF';
 import AdressSearch from './AdressSearch';
-import Nav from './Nav';
-
 import styles from './LandingPage.module.css';
 
 function LandingPage() {
@@ -31,10 +29,6 @@ function LandingPage() {
   };
   return (
     <main className={styles.main}>
-      <header className={styles.header}>
-        <Nav />
-      </header>
-
       <div className={styles.welcome}>
         <CurrentDate />
       </div>
