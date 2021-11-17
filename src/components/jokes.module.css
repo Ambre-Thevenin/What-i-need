@@ -5,8 +5,12 @@
   padding: 8px;
 }
 .text {
+  display: flex;
   flex-wrap: wrap;
   font-size: large;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
   padding: 10px;
 }
 .br {
