@@ -6,7 +6,7 @@
   /* min-height: 75px; */
   padding: 1rem;
   color: black;
-  background-color: blueviolet;
+  background-color: #2A9D8F;
 }
 
 .navbar_links {
@@ -52,7 +52,7 @@
 
   .show-nav .navbar_links {
     width: 13vw;
-    /* right: 29vw; USELESS*/
+    /* right: 29vw;*/
     visibility: visible;
     background-color: #e9c46a;
   }
