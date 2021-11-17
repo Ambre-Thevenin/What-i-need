@@ -5,7 +5,7 @@ import StartMeteoPage from './ModuleMeteo';
 import StartShopsPage from './ModuleShops';
 import StartSNCFPage from './ModuleSNCF';
 import AdressSearch from './AdressSearch';
-import Nav from './Nav';
+// import Nav from './Nav';
 
 import styles from './LandingPage.module.css';
 
@@ -29,12 +29,18 @@ function LandingPage() {
     localStorage.setItem('destination', JSON.stringify(destinationData));
     localStorage.setItem('city', userCity);
   };
+  // eslint-disable-next-line no-console
+
+  /*console.log(originData.latitude);
+  console.log(originData.longitude);
+  console.log(destinationData.latitude);
+  console.log(destinationData.longitude);*/
 
   return (
     <main className={styles.main}>
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         <Nav />
-      </header>
+      </header> */}
 
       <div className={styles.welcome}>
         <CurrentDate />
@@ -44,8 +50,14 @@ function LandingPage() {
       </div>
 
       <div className={styles.cards}>
-        <StartSNCFPage />
-
+        {originData && destinationData && (
+          <StartSNCFPage
+            departureLatitude={originData.latitude}
+            departureLongitude={originData.longitude}
+            arrivalLatitude={destinationData.latitude}
+            arrivalLongitude={destinationData.longitude}
+          />
+        )}
         <StartMeteoPage destination={destinationData} city={userCity} />
 
         <StartShopsPage />

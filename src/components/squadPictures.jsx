@@ -5,14 +5,14 @@ import person_3 from './assets/person_3.jpg';
 import person_4 from './assets/person_4.jpg';
 import styles from './about.module.css';
 
-import Nav from './Nav';
+// import Nav from './Nav';
 
 function WinSquad() {
   return (
     <div className="Nav">
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         <Nav />
-      </header>
+      </header> */}
       <div className={styles.squad}>
         <h1>À propos de nous</h1>
         <h2>WIN SQUAD</h2>
