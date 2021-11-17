@@ -39,8 +39,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    list-style: none;
+    /* position: fixed; */
 
     right: -100vw;
 
@@ -51,6 +50,7 @@
     visibility: hidden;
 
     transition: all 0.9s ease-in-out;
+    list-style: none;
   }
 
   .show-nav .navbar_links {
@@ -68,13 +68,13 @@
 
   .navbar_burger {
     display: block;
-    position: fixed;
+    /* position: fixed; */
     top: 1rem;
     right: 3rem;
   }
   .navbar_burger:hover {
     cursor: pointer;
-    position: fixed;
+    /* position: fixed; */
     top: 1rem;
   }
   .burger-nav {

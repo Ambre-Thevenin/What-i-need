@@ -41,8 +41,8 @@ function Nav() {
           </a>
         </li>
         <li className="navbar_item">
-          <a href="/About" className="navbar_link">
-            About
+          <a href="/about" className="navbar_link">
+            A propos
           </a>
         </li>
       </ul>
