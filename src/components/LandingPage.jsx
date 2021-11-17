@@ -29,7 +29,6 @@ function LandingPage() {
     localStorage.setItem('destination', JSON.stringify(destinationData));
     localStorage.setItem('city', userCity);
   };
-
   return (
     <main className={styles.main}>
       <header className={styles.header}>
@@ -44,11 +43,17 @@ function LandingPage() {
       </div>
 
       <div className={styles.cards}>
-        <StartSNCFPage />
-
+        {originData && destinationData && (
+          <StartSNCFPage
+            departureLatitude={originData.latitude}
+            departureLongitude={originData.longitude}
+            arrivalLatitude={destinationData.latitude}
+            arrivalLongitude={destinationData.longitude}
+          />
+        )}
         <StartMeteoPage destination={destinationData} city={userCity} />
 
-        <StartShopsPage />
+        {originData && destinationData && <StartShopsPage arrivalLatitude={destinationData.latitude} arrivalLongitude={destinationData.longitude} />}
 
         <StartAstroPage />
       </div>
