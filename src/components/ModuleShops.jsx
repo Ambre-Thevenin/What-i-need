@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
+import ShopsSearch from './ShopsSearch';
+
 import styles from './LandingPage.module.css';
 
-function StartShopsPage() {
+function StartShopsPage({ arrivalLatitude, arrivalLongitude }) {
   const [shopsPage, setShopsPage] = useState('isHidden');
 
   if (shopsPage === 'isHidden') {
@@ -22,7 +24,7 @@ function StartShopsPage() {
     return (
       <div className={styles.mainCard}>
         <button onClick={() => setShopsPage('isHidden')}>Exit</button>
-        <p> TEST SPECIAL SHOPS</p>
+        <ShopsSearch arrivalLatitude={arrivalLatitude} arrivalLongitude={arrivalLongitude} />
       </div>
     );
   }

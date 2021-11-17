@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-// eslint-disable-next-line no-unused-vars
-import Journey from './Journey';
+import ShopsDetails from './ShopsDetails';
 
-function ShopsSearch() {
+function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
   // eslint-disable-next-line no-unused-vars
   const [Shopsfind, setShopsfind] = useState();
   const getShops = () => {
     axios
       .get(
-        'https://api.navitia.io/v1/coverage/sncf/journeys?from=stop_area%3ASNCF%3A87986505&to=stop_area%3ASNCF%3A87382499&key=33c6537e-59dc-429c-af63-ce45208739c6',
+        `https://api.navitia.io/v1/coverage/fr-idf/addresses/${arrivalLongitude}%3B${arrivalLatitude}/poi_types/poi_type%3Ashop%3Asupermarket/pois?distance=1000&key=c4978a47-6678-4403-bb27-363d03d40865`,
+        //'https://api.navitia.io/v1/coverage/fr-idf/addresses/2.36764%3B48.85319/poi_types/poi_type%3Ashop%3Aclothes/pois?distance=300&key=c4978a47-6678-4403-bb27-363d03d40865',
       )
-      .then((res) => setShopsfind(res));
+      .then((res) => setShopsfind(res.data.pois));
   };
   return (
     <div>
-      <button onClick={getShops}> get journey </button>
+      <button onClick={getShops}> get shops </button>
+      {Shopsfind && <ShopsDetails shopsArray={Shopsfind.slice(2)} />}
     </div>
   );
 }
