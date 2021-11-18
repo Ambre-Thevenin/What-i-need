@@ -5,6 +5,7 @@ import StartMeteoPage from './ModuleMeteo';
 import StartShopsPage from './ModuleShops';
 import StartSNCFPage from './ModuleSNCF';
 import AdressSearch from './AdressSearch';
+
 import styles from './LandingPage.module.css';
 
 function LandingPage() {
@@ -39,15 +40,15 @@ function LandingPage() {
       <div className={styles.cards}>
         {originData && destinationData && (
           <StartSNCFPage
-            departureLatitude={originData.latitude}
-            departureLongitude={originData.longitude}
-            arrivalLatitude={destinationData.latitude}
-            arrivalLongitude={destinationData.longitude}
+            departureLatitude={originData.lat}
+            departureLongitude={originData.lon}
+            arrivalLatitude={destinationData.lat}
+            arrivalLongitude={destinationData.lon}
           />
         )}
         <StartMeteoPage destination={destinationData} city={userCity} />
 
-        {originData && destinationData && <StartShopsPage arrivalLatitude={destinationData.latitude} arrivalLongitude={destinationData.longitude} />}
+        {originData && destinationData && <StartShopsPage arrivalLatitude={destinationData.lat} arrivalLongitude={destinationData.lon} />}
 
         <StartAstroPage />
       </div>
