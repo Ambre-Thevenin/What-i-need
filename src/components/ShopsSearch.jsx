@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ShopsDetails from './ShopsDetails';
+import styles from './LandingPage.module.css';
 
 function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
   const [Shopsfind, setShopsfind] = useState([]);
@@ -16,7 +17,7 @@ function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
 
   return (
     <div>
-      <button onClick={getShops}> get shops </button>
+      <button className={styles.exitButton} onClick={getShops}> get shops </button>
       {Shopsfind && <ShopsDetails shopsArray={shopsSlice} />}
     </div>
   );

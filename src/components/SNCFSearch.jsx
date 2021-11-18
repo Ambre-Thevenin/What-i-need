@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Journey from './Journey';
-
+import styles from './LandingPage.module.css';
 //require('dotenv').config();
 
 function SNCFSearch({ departureLatitude, departureLongitude, arrivalLatitude, arrivalLongitude }) {
@@ -17,7 +17,9 @@ function SNCFSearch({ departureLatitude, departureLongitude, arrivalLatitude, ar
   };
   return (
     <div>
-      <button onClick={getJourney}> get journey </button>
+      <button className={styles.exitButton} onClick={getJourney}>
+        Voir itinéraire
+      </button>
       {SNCFfind && (
         <Journey
           journeyTime={Math.ceil(SNCFfind.duration / 60)}

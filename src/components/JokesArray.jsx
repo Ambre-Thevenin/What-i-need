@@ -10,7 +10,13 @@ const AstroJokes = [
   { type: 'Jokes', text: "C'est quoi un crustacé bûcheron? Un homard scie(Omar Sy), Yann", key: 9 },
   { type: 'Jokes', text: "Comment appelle-t-on un chat qui va dans l'espace ? Un chat tellite, Yann", key: 10 },
   { type: 'Jokes', text: "Pourquoi quand on lance de l'ail, il revient toujours ? C'est le retour du Jedi (jet d'ail), Yann", key: 11 },
-  { type: 'Jokes', text: "Personne n'est nul part, Paul-Emmanuel", key: 12 },
+  { type: 'Jokes', text: "Personne n'est nulle part, Paul-Emmanuel", key: 12 },
+  {
+    type: 'Jokes',
+    text: "Le patient : bonjour Dr je saigne de la main gauche encore, la semaine dernière c'était à la main droite. Le doc : eh bah ça doit être une plaie-mobile, Arezki",
+    key: 18,
+  },
+  { type: 'Jokes', text: 'Dieu voulut que le Coca colle et le Coca-Cola, Yann', key: 19 },
   {
     type: 'Astres',
     text: 'Célibataire, vous aurez une aventure avec un conseiller en gestion de patrimoine qui s’appelle Thierry. En couple, vous mangerez des cookies goût thon-mayonnaise.',

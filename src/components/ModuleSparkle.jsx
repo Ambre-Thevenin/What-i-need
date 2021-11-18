@@ -18,7 +18,9 @@ function StartAstroPage() {
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setAstroPage('collapsed')}>X</button>
+        <button className={styles.exitButton} onClick={() => setAstroPage('collapsed')}>
+          X
+        </button>
         <p> DES MESSAGES OU UNE FARCE</p>
         <RandomJokes />
       </div>
