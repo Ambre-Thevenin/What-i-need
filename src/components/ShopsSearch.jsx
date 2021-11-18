@@ -17,7 +17,9 @@ function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
 
   return (
     <div>
-      <button className={styles.exitButton} onClick={getShops}> get shops </button>
+      <button className={styles.exitButton} onClick={getShops}>
+        Voir les supermarchés
+      </button>
       {Shopsfind && <ShopsDetails shopsArray={shopsSlice} />}
     </div>
   );
