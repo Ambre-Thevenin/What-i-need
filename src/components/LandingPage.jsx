@@ -12,7 +12,7 @@ function LandingPage() {
   const [destinationData, setDestinationData] = useState(localStorage.getItem('destination'));
   const [originData, setOriginData] = useState(localStorage.getItem('origin'));
   const [userCity, setUserCity] = useState('Paris');
-  // const [query, setQuery] = useState(false);
+
   useEffect(() => {
     localStorage.setItem('origin', JSON.stringify(originData));
     localStorage.setItem('destination', JSON.stringify(destinationData));

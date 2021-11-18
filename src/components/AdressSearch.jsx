@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import styles from './AdressSearch.module.css';
 
-// const api_geo = 'ba8deb2152e71c554c801f9aecc3805b';
-
 function AdressSearch({ origin, destination }) {
   const [firstQuery, setFirstQuery] = useState('');
   const [secondQuery, setSecondQuery] = useState('');
