@@ -4,8 +4,6 @@ import axios from 'axios';
 import HourlyMeteo from './HourlyMeteo';
 
 const api_weather = 'a007f6ea1885d8331305baf19e99c488';
-// http://api.openweathermap.org/data/2.5/weather?q=Paris&appid=a007f6ea1885d8331305baf19e99c488&units=metric&lang=fr
-// https://api.openweathermap.org/data/2.5/onecall?lat=48.858705&lon=2.342865&appid=a007f6ea1885d8331305baf19e99c488&units=metric&lang=fr
 
 function MeteoForecast({ setIcon, icon, city, destination }) {
   const [currentWeather, setCurrentWeather] = useState();

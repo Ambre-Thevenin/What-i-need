@@ -2,17 +2,17 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
 import RandomJokes from './jokes';
-import sparkles_icon from './assets/sparkles_icon.png';
+import sparkle_glitter from './assets/sparkle_glitter.png';
 
 import styles from './LandingPage.module.css';
 
 function StartAstroPage() {
-  const [astroPage, setAstroPage] = useState('isHidden');
+  const [astroPage, setAstroPage] = useState('collapsed');
 
   if (astroPage === 'isHidden') {
     return (
       <div className={styles.card}>
-        <img src={sparkles_icon} alt="sparkle icon" role="button" className={styles.imgCard} onClick={() => setAstroPage('!isHidden')} />
+        <img src={sparkle_glitter} alt="sparkle icon" role="button" className={styles.sparkleCard} onClick={() => setAstroPage('opened')} />
       </div>
     );
   } else {

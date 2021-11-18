@@ -1,31 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import styles from './AdressSearch.module.css';
 
-const api_geo = 'ba8deb2152e71c554c801f9aecc3805b';
-//http://api.positionstack.com/v1/forward?access_key=ba8deb2152e71c554c801f9aecc3805b&query=44%20Rue%20Alphonse%20Penaud%207520%20Paris&limit=10&output=json&country=FR
+// const api_geo = 'ba8deb2152e71c554c801f9aecc3805b';
 
-function AdressSearch({ origin, destination, handleSubmit }) {
+function AdressSearch({ origin, destination }) {
   const [firstQuery, setFirstQuery] = useState('');
   const [secondQuery, setSecondQuery] = useState('');
 
-  useEffect(() => {
-    axios
-      .get(`http://api.positionstack.com/v1/forward?access_key=${api_geo}&query=${firstQuery}&limit=10&output=json&country=FR`)
-      .then((res) => res.data)
-      .then((data) => {
-        origin(data.data[0]);
-      });
-  }, [firstQuery]);
-
-  useEffect(() => {
-    axios
-      .get(`http://api.positionstack.com/v1/forward?access_key=${api_geo}&query=${secondQuery}&limit=10&output=json&country=FR`)
-      .then((res) => res.data)
-      .then((data) => {
-        destination(data.data[0]);
-      });
-  }, [secondQuery]);
+  async function handleClick() {
+    const originRes = await axios.get(`https://nominatim.openstreetmap.org/?addressdetails=1&q=${firstQuery}&format=json&limit=1`);
+    const destinationRes = await axios.get(`https://nominatim.openstreetmap.org/?addressdetails=1&q=${secondQuery}&format=json&limit=1`);
+    origin(originRes.data[0]);
+    destination(destinationRes.data[0]);
+  }
 
   return (
     <div>
@@ -48,7 +36,7 @@ function AdressSearch({ origin, destination, handleSubmit }) {
           className={styles.AdressSearchInput}
           placeholder="N°, Rue, CP et ville"
         ></input>
-        <input type="button" onClick={(e) => handleSubmit(e)} value="Rechercher" className={styles.AdressSearchButton} />
+        <input type="button" onClick={() => handleClick()} value="Rechercher" className={styles.AdressSearchButton} />
       </form>
     </div>
   );

@@ -2,26 +2,22 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
 import SNCFSearch from './SNCFSearch';
+import SNCF_logo from './assets/SNCF_logo.svg';
+
 import styles from './LandingPage.module.css';
 
 function StartSNCFPage({ departureLatitude, departureLongitude, arrivalLatitude, arrivalLongitude }) {
-  const [SNCFPage, setSNCFPage] = useState('isHidden');
-  if (SNCFPage === 'isHidden') {
+  const [SNCFPage, setSNCFPage] = useState('collapsed');
+  if (SNCFPage === 'collapsed') {
     return (
       <div className={styles.card}>
-        <img
-          src="https://www.radars-auto.com/carte-radar/carte-france-index.png"
-          role="button"
-          alt="cardSNCF"
-          className={styles.imgCard}
-          onClick={() => setSNCFPage('!isHidden')}
-        />
+        <img src={SNCF_logo} alt="SNCF icon" role="button" className={styles.imgCard} onClick={() => setSNCFPage('opened')} />
       </div>
     );
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setSNCFPage('isHidden')}>Exit</button>
+        <button onClick={() => setSNCFPage('collapsed')}>Exit</button>
         <SNCFSearch
           departureLatitude={departureLatitude}
           departureLongitude={departureLongitude}

@@ -4,13 +4,9 @@
   align-items: center;
   justify-content: center;
   background-color: #2a9d8f;
-  /* width: 100vw; */
   align-items: center;
-  /* justify-content: space-between; */
-  /* min-height: 75px; */
-  /* padding: 1rem; */
   color: black;
-  background-color: blueviolet;
+  background-color: #2a9d8f;
 }
 
 .navbar_links {
@@ -55,12 +51,9 @@
   .navbar_links {
     border-radius: 5%;
     display: flex;
-
     right: -100vw;
     top: 69px;
     width: 0;
-
-    /* padding: 2rem; */
     visibility: hidden;
 
     transition: all 0.9s ease-in-out;
@@ -70,7 +63,6 @@
   .show-nav .navbar_links {
     height: 30vw;
     width: 13vw;
-    /* right: 29vw; USELESS*/
     visibility: visible;
     background-color: #e9c46a;
   }
@@ -84,13 +76,9 @@
     display: block;
     padding-top: 2vw;
     padding-right: 12vw;
-    /* position: fixed; */
-    /* top: 1rem;
-    right: 3rem; */
   }
   .navbar_burger:hover {
     cursor: pointer;
-    /* position: fixed; */
     top: 1rem;
   }
   .burger-nav {

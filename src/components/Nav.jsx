@@ -25,26 +25,6 @@ function Nav() {
               </a>
             </li>
             <li className="navbar_item">
-              <a href="/" className="navbar_link">
-                Carte
-              </a>
-            </li>
-            <li className="navbar_item">
-              <a href="/" className="navbar_link">
-                Meteo
-              </a>
-            </li>
-            <li className="navbar_item">
-              <a href="/" className="navbar_link">
-                Shops
-              </a>
-            </li>
-            <li className="navbar_item">
-              <a href="/" className="navbar_link">
-                Surprise
-              </a>
-            </li>
-            <li className="navbar_item">
               <a href="/about" className="navbar_link">
                 Contact
               </a>
@@ -55,9 +35,6 @@ function Nav() {
           </button>
         </div>
       </div>
-      {/* <button className="navbar_burger" onClick={handleShowLinks}>
-        <span className="burger-plus"></span>
-      </button> */}
     </nav>
   );
 }

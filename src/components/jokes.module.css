@@ -5,8 +5,12 @@
   padding: 8px;
 }
 .text {
+  display: flex;
   flex-wrap: wrap;
   font-size: large;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
   padding: 10px;
 }
 .br {
@@ -18,12 +22,4 @@
 .cardJokes {
   background-color: chartreuse;
   width: 15px;
-}
-.cardJokes {
-  /* max-width: 45%;
-  max-height: 45%;
-  border-radius: 20%;
-  background-color: #f4a261;
-  opacity: 75%;
-  padding: 4px; */
 }
