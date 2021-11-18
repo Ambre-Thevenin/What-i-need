@@ -4,8 +4,7 @@ import ShopsDetails from './ShopsDetails';
 import styles from './LandingPage.module.css';
 
 function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
-  // eslint-disable-next-line no-unused-vars
-  const [Shopsfind, setShopsfind] = useState();
+  const [Shopsfind, setShopsfind] = useState([]);
   const getShops = () => {
     axios
       .get(
@@ -14,12 +13,12 @@ function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
       )
       .then((res) => setShopsfind(res.data.pois));
   };
+  const shopsSlice = Shopsfind.slice(0, 5);
+
   return (
     <div>
-      <button className={styles.exitButton} onClick={getShops}>
-        Voir les supermarchés
-      </button>
-      {Shopsfind && <ShopsDetails shopsArray={Shopsfind.slice(2)} />}
+      <button className={styles.exitButton} onClick={getShops}> get shops </button>
+      {Shopsfind && <ShopsDetails shopsArray={shopsSlice} />}
     </div>
   );
 }
