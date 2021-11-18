@@ -82,3 +82,11 @@
   border-radius: 20%;
   opacity: 75%;
 }
+
+.exitButton {
+  border-radius: 30px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  background-color: #f4a261;
+  text-align: center;
+}

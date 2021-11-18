@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import ShopsDetails from './ShopsDetails';
+import styles from './LandingPage.module.css';
 
 function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
   // eslint-disable-next-line no-unused-vars
@@ -15,7 +16,9 @@ function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
   };
   return (
     <div>
-      <button onClick={getShops}> get shops </button>
+      <button className={styles.exitButton} onClick={getShops}>
+        Voir les supermarchés
+      </button>
       {Shopsfind && <ShopsDetails shopsArray={Shopsfind.slice(2)} />}
     </div>
   );

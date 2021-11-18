@@ -17,7 +17,9 @@ function StartSNCFPage({ departureLatitude, departureLongitude, arrivalLatitude,
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setSNCFPage('collapsed')}>Exit</button>
+        <button className={styles.exitButton} onClick={() => setSNCFPage('collapsed')}>
+          X
+        </button>
         <SNCFSearch
           departureLatitude={departureLatitude}
           departureLongitude={departureLongitude}

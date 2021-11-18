@@ -30,7 +30,9 @@ function StartMeteoPage({ destination, city }) {
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setMeteoPage('collapsed')}>X</button>
+        <button className={styles.exitButton} onClick={() => setMeteoPage('collapsed')}>
+          X
+        </button>
         <MeteoForecast setIcon={setWeatherIcon} icon={weatherIcon} destination={destination} city={city} />
       </div>
     );

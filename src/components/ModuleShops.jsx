@@ -18,7 +18,9 @@ function StartShopsPage({ arrivalLatitude, arrivalLongitude }) {
   } else {
     return (
       <div className={styles.mainCard}>
-        <button onClick={() => setShopsPage('collapsed')}>Exit</button>
+        <button className={styles.exitButton} onClick={() => setShopsPage('collapsed')}>
+          X
+        </button>
         <ShopsSearch arrivalLatitude={arrivalLatitude} arrivalLongitude={arrivalLongitude} />
       </div>
     );
