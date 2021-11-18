@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CurrentDate from './Date';
 import StartAstroPage from './ModuleSparkle';
 import StartMeteoPage from './ModuleMeteo';
@@ -11,7 +11,13 @@ import styles from './LandingPage.module.css';
 function LandingPage() {
   const [destinationData, setDestinationData] = useState(localStorage.getItem('destination'));
   const [originData, setOriginData] = useState(localStorage.getItem('origin'));
-  const [userCity, setUserCity] = useState(localStorage.getItem('city'));
+  const [userCity, setUserCity] = useState('Paris');
+  // const [query, setQuery] = useState(false);
+  useEffect(() => {
+    localStorage.setItem('origin', JSON.stringify(originData));
+    localStorage.setItem('destination', JSON.stringify(destinationData));
+    localStorage.setItem('city', userCity);
+  }, [originData, destinationData]);
 
   function handleOrigin(adress) {
     setOriginData(adress);
@@ -19,22 +25,16 @@ function LandingPage() {
 
   function handleDestination(adress) {
     setDestinationData(adress);
-    setUserCity(adress.locality);
+    setUserCity(adress.address.city || adress.address.municipality);
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    localStorage.setItem('origin', JSON.stringify(originData));
-    localStorage.setItem('destination', JSON.stringify(destinationData));
-    localStorage.setItem('city', userCity);
-  };
   return (
     <main className={styles.main}>
       <div className={styles.welcome}>
         <CurrentDate />
       </div>
       <div className={styles.input}>
-        <AdressSearch origin={handleOrigin} destination={handleDestination} handleSubmit={handleSubmit} />
+        <AdressSearch origin={handleOrigin} destination={handleDestination} />
       </div>
 
       <div className={styles.cards}>
