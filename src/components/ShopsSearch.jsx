@@ -3,8 +3,7 @@ import axios from 'axios';
 import ShopsDetails from './ShopsDetails';
 
 function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
-  // eslint-disable-next-line no-unused-vars
-  const [Shopsfind, setShopsfind] = useState();
+  const [Shopsfind, setShopsfind] = useState([]);
   const getShops = () => {
     axios
       .get(
@@ -13,10 +12,12 @@ function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
       )
       .then((res) => setShopsfind(res.data.pois));
   };
+  const shopsSlice = Shopsfind.slice(0, 5);
+
   return (
     <div>
       <button onClick={getShops}> get shops </button>
-      {Shopsfind && <ShopsDetails shopsArray={Shopsfind.slice(2)} />}
+      {Shopsfind && <ShopsDetails shopsArray={shopsSlice} />}
     </div>
   );
 }

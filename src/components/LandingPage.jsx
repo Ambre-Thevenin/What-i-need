@@ -5,6 +5,7 @@ import StartMeteoPage from './ModuleMeteo';
 import StartShopsPage from './ModuleShops';
 import StartSNCFPage from './ModuleSNCF';
 import AdressSearch from './AdressSearch';
+
 import styles from './LandingPage.module.css';
 
 function LandingPage() {
