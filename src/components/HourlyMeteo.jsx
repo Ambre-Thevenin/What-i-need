@@ -18,7 +18,11 @@ function HourlyMeteo({ coordinates, destination }) {
     setForecast(res.hourly);
   }, [coordinates, destination]);
 
-  let forecastHours = forecast.slice(0, 8);
+  const [forecastHours, setForecastHours] = useState([]);
+  useEffect(() => {
+    setForecastHours(forecast.slice(0, 8));
+  }, [forecast]);
+
   return (
     <div className={styles.hourlyMeteo}>
       {forecastHours.length &&
