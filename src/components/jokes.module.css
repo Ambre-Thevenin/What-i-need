@@ -1,0 +1,25 @@
+.button {
+  background-color: #f4a261;
+  border-radius: 5px;
+  border-style: none;
+  padding: 8px;
+}
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: large;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  padding: 10px;
+}
+.br {
+  display: flex;
+  left: 0;
+  right: 0;
+  justify-content: space-around;
+}
+.cardJokes {
+  background-color: chartreuse;
+  width: 15px;
+}

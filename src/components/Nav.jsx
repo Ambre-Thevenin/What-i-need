@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import logo_WIN from './logo_WIN.png';
 
-import './Nav.css';
+import styles from './Nav.module.css';
 
 function Nav() {
   const [showLinks, setShowLinks] = useState(false);
@@ -10,49 +11,33 @@ function Nav() {
   const handleShowLinks = () => {
     setShowLinks(!showLinks);
   };
-
   return (
-    <nav className={`navbar ${showLinks ? 'show-nav' : 'hide-nav'} `}>
-      <img className="nav_logo" src={logo_WIN} alt="Hello" />
-      <ul className="navbar_links">
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            Accueil
-          </a>
-        </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            Carte
-          </a>
-        </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            Meteo
-          </a>
-        </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            Shops
-          </a>
-        </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            Astro
-          </a>
-        </li>
-        <li className="navbar_item">
-          <a href="/" className="navbar_link">
-            About
-          </a>
-        </li>
-      </ul>
-      <button className="navbar_burger" onClick={handleShowLinks}>
-        <span className="burger-nav"></span>
-      </button>
-      <button className="navbar_burger" onClick={handleShowLinks}>
-        <span className="burger-plus"></span>
-      </button>
-    </nav>
+    <div className={styles.navbar}>
+      <nav className={showLinks ? `${styles.show_nav}` : `${styles.hide_nav}`}>
+        <div className={styles.container}>
+          <div className={styles.logo_container}>
+            <img className={styles.nav_logo} src={logo_WIN} alt="Hello" />
+          </div>
+          <div className={styles.menu_container}>
+            <ul className={styles.navbar_links}>
+              <li className={styles.navbar_item}>
+                <NavLink to="/" className={styles.navbar_link}>
+                  Accueil
+                </NavLink>
+              </li>
+              <li className={styles.navbar_item}>
+                <NavLink to="/about" className={styles.navbar_link}>
+                  Contact
+                </NavLink>
+              </li>
+            </ul>
+            <button className={styles.navbar_burger} onClick={handleShowLinks}>
+              <span className={styles.burger_nav}></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
   );
 }
 

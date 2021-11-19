@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
+
 import emailjs from 'emailjs-com';
 import { init } from 'emailjs-com';
 init('user_IHdUPDaW9xTAJgs6i8GWb');
+
 import styles from './about.module.css';
 
 function ContactForm() {
