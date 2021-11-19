@@ -7,11 +7,10 @@ import styles from './jokes.module.css';
 function RandomJokes() {
   const FirstToSeeJokes = 'De quoi avez-vous besoin ?';
   const [textValue, setTextValue] = useState(FirstToSeeJokes);
-  const SingleJoke = [...AstroJokes];
 
   const changeJokesValue = (filter) => {
-    const len = SingleJoke.length;
-    const joke = SingleJoke[Math.floor(Math.random() * len)];
+    const len = AstroJokes.length;
+    const joke = AstroJokes[Math.floor(Math.random() * len)];
     if (joke.type === filter) {
       setTextValue(joke.text);
     } else {
