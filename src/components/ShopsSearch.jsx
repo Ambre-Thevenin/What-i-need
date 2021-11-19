@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+
 import ShopsDetails from './ShopsDetails';
+
 import styles from './LandingPage.module.css';
 
 function ShopsSearch({ arrivalLatitude, arrivalLongitude }) {
