@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import styles from './MeteoForecast.module.css';
 import axios from 'axios';
+
 import HourlyMeteo from './HourlyMeteo';
+
+import styles from './MeteoForecast.module.css';
 
 const api_weather = 'a007f6ea1885d8331305baf19e99c488';
 

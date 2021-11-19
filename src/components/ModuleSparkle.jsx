@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState } from 'react';
+
 import RandomJokes from './jokes';
 import sparkle_glitter from './assets/sparkle_glitter.png';
 

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+
 import Journey from './Journey';
+
 import styles from './LandingPage.module.css';
-//require('dotenv').config();
 
 function SNCFSearch({ departureLatitude, departureLongitude, arrivalLatitude, arrivalLongitude }) {
   const [SNCFfind, setSNCFfind] = useState();

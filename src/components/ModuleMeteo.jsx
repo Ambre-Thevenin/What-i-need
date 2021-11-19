@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { useState, useEffect } from 'react';
-import MeteoForecast from './MeteoForecast';
-import styles from './LandingPage.module.css';
 import axios from 'axios';
+
+import MeteoForecast from './MeteoForecast';
+
+import styles from './LandingPage.module.css';
 
 function StartMeteoPage({ destination, city }) {
   const api_weather = 'a007f6ea1885d8331305baf19e99c488';

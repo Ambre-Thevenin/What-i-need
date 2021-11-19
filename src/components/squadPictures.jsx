@@ -1,8 +1,10 @@
 import React from 'react';
+
 import person_1 from './assets/person_1.jpg';
 import person_2 from './assets/person_2.jpg';
 import person_3 from './assets/person_3.jpg';
 import person_4 from './assets/person_4.jpg';
+
 import styles from './about.module.css';
 
 function WinSquad() {

@@ -1,6 +1,7 @@
 import React from 'react';
-import LandingPage from './components/LandingPage';
 import { Route, Switch } from 'react-router-dom';
+
+import LandingPage from './components/LandingPage';
 import ContactForm from './components/contactForm';
 import WinSquad from './components/squadPictures';
 import Nav from './components/Nav';

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+
 import styles from './HourForecast.module.css';
 
 const api_weather = 'a007f6ea1885d8331305baf19e99c488';
