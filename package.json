@@ -8,6 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --host",
+    "start": "react-scripts start",
     "build": "vite build",
     "serve": "vite preview",
     "lint": "lint-staged",
