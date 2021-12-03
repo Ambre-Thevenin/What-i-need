@@ -8,9 +8,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --host",
-    "start": "react-scripts start",
+    "start": "vite --host",
     "build": "vite build",
-    "serve": "vite preview",
+    "preview": "vite preview",
     "lint": "lint-staged",
     "prepare": "husky install",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings=5"
