@@ -8,7 +8,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite --host",
-    "start": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "lint-staged",
